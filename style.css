@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+body {
+    transition: all ease 1s;
+}
+
+.c-burger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    box-shadow: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.c-burger:focus {
+    outline: none;
+}
+
+.c-burger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: #ffff;
+}
+
+.c-burger span::before,
+.c-burger span::after {
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 8px;
+    background: #ffff;
+    content: "";
+}
+
+.c-burger span::before {
+    top: -20px;
+}
+
+.c-burger span::after {
+    bottom: -20px;
+}
+
+.c-burger {
+    background: #cb0032;
+}
+
+.c-burger-line span {
+    transition: background 0s 0.3s;
+}
+
+.c-burger-line span::before,
+.c-burger-line span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3S, 0S;
+}
+
+.c-burger-line span::before {
+    transition-property: top, transform;
+}
+
+.c-burger-line span::after {
+    transition-property: bottom, transform;
+}
+
+.c-burger-line.is-active {
+    background: green;
+}
+
+.c-burger-line.is-active span {
+    background: none;
+}
+
+.c-burger-line.is-active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.c-burger-line.is-active span::after {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.c-burger-line.is-active span::before,
+.c-burger-line.is-active span::after {
+    transition-delay: 0s, 0.3s;
+}
+
+
+/*MENU/*/
+
+#menu {
+    width: 300px;
+    margin-left: -204px;
+    background: #fbf0ff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease 1s;
+    z-index: 9999;
+}
+
+.container {
+    width: 80%;
+    min-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.body-active {
+    margin-left: 300px;
+}
+
+#menu.nav-active {
+    margin-left: 0;
+}
+
+ul {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: indigo;
+}
